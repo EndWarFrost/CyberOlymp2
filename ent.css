@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Gabriela;
+    src: url('Font/Gabriela-Regular.ttf');
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+   font-size: 20px;
+   font-family: Gabriela;
+   display: flex;
+   background: url('Background/GameVideo.mp4');
+   background-size: cover;
+}
+#bgvideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -9999;
+}
+form{
+    padding-top: 300px;
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+    height: 1000px;
+}
+fieldset {
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.637);
+    box-shadow: 0 0px 10px white;
+    
+}
+input{
+    font-family: Gabriela;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 0;
+}
+.space{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+fieldset a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+fieldset a:hover{
+    color: rgb(255, 13, 13);
+    text-decoration: underline;
+}
+button{
+    font-family: Gabriela;
+    color: white;
+    font-size: 40px;
+    width: 200px;
+    border: 0;
+    background-color: #721011;
+    border-radius: 10px;
+    margin: 10px;
+}
+button:hover{
+    color: #721011;
+    background-color: white;
+}
+button a{
+    padding-left: 10px;
+}

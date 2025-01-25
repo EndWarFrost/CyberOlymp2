@@ -1,0 +1,254 @@
+@font-face {
+    font-family: Gabriela;
+    src: url('Font/Gabriela-Regular.ttf');
+}
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: #D8383A;
+    color: white;
+   font-size: 20px;
+   font-family: Gabriela;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+/*Навигационная таблица*/
+.navbar{
+    background: #100202;
+    height: 40px;
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.navbar a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #ff0000;
+    animation: move 7s infinite alternate;
+    text-shadow: 0px 5px 3px white;
+    }
+    /* Стили для дополнительной навигационной панели форума */
+.forum-nav {
+    background: #721011;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Расстояние между ссылками */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forum-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.forum-nav a:hover {
+    background-color: #100202;
+    color: #ff0000;
+}
+table{
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+tr,td{
+    background-color: grey;
+    border-radius: 10px;
+}
+
+@keyframes move {
+    0% {
+        padding-top: 5px;
+    }
+    100% {
+        padding: 5px;
+    }
+}
+/*Контейнер команд*/
+.team{
+    margin-bottom: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+.grid-example {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ширина карточек от 300px */
+    gap: 20px; /* Увеличим расстояние между карточками */
+    padding: 20px; /* Отступы внутри контейнера */
+}
+.box {
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 15px; /* Закруглим углы */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+.box:hover {
+    transform: scale(1.05); /* Увеличиваем карточку при наведении */
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Тень при наведении */
+}
+.box img {
+    width: 150px; /* Уменьшим размер изображения */
+    height: 150px; /* Сделаем изображение квадратным */
+    border-radius: 50%; /* Круглое изображение */
+    object-fit: cover; /* Чтобы изображение не искажалось */
+}
+.box h3 {
+    margin: 15px 0 10px; /* Отступы для заголовка */
+    font-size: 24px; /* Увеличим размер заголовка */
+}
+.box p {
+    margin: 10px 0; /* Отступы для текста */
+    font-size: 16px; /* Размер текста */
+}
+button{
+    font-family: Gabriela;
+    font-size: 25px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #721011;
+    color: white;
+    margin-top: 15px; /* Отступ для кнопки */
+    padding: 10px 20px; /* Размер кнопки */
+    font-size: 18px; /* Размер текста на кнопке */
+    cursor: pointer; /* Курсор в виде указателя */
+}
+button:hover{
+    font-family: Gabriela;
+    background-color: white;
+    color: #721011;
+}
+/*Слайдер*/
+.content {
+    padding-top: 30px;
+    flex: 1;
+    padding-bottom: 50px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого */
+}
+
+.slider {
+    width: 100%; /* Слайдер занимает всю ширину контейнера content */
+    max-width: 1400px; /* Максимальная ширина слайдера */
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.808);
+    border-radius: 15px;
+    box-shadow: 0 0px 16px rgba(255, 255, 255, 0.5);
+    position: relative; /* Для позиционирования кнопок prev и next */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    font-size: 120px;
+    text-align: center;
+    padding: 60px;
+    color: #463d3d;
+    border-radius: 15px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px 21.5px;
+    margin-top: -30px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    background: #721011;
+}
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #721011;
+}
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+/* Подвал */
+footer {
+    background: #100202;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+.footer-left h1 {
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.footer-center h3 {
+    font-size: 24px;
+    color: #ffffffad;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.493);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    color: #ff0000;
+    text-shadow: 0px 5px 3px white;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>КиберОлимп</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>КиберОлимп</h1>
+        <div class="nav-links">
+            <a href="index.html">Турниры</a>
+            <a href="forum.html">Форум</a>
+            <a href="tournaments.html">Расписание турниров</a>
+            <a href="team.html">Команды</a>
+        </div>
+        <a href="entrance.html">Вход/Регистрация</a>
+    </div>
+
+    <div class="content">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <video autoplay loop muted>
+                        <source src="Stream/CSGO.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slide">
+                    <video autoplay loop muted>
+                        <source src="Stream/DOTA2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slide">
+                    <video autoplay loop muted>
+                        <source src="Stream/RL.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+
+        
+    </div>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-left">
+                <h1>КиберОлимп</h1>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-center">
+                <h3>О нас</h3>
+                <div class="footer-links">
+                    <a href="#">Информация</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Обзоры</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-center">
+                <h3>Поддержка</h3>
+                <div class="footer-links">
+                    <a href="#">Форумы</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-center">
+                <h3>Контакты</h3>
+                <div class="footer-links">
+                    <a href="#">+7 (952)-220-00-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.querySelectorAll(".slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            document.querySelector(".slides").style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+    </script>
+
+</body>
+</html>
