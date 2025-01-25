@@ -63,15 +63,45 @@ html, body {
     background-color: #100202;
     color: #ff0000;
 }
-table{
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid black;
+/* Стили для таблиц */
+table {
+    width: 100%;
+    max-width: 800px; 
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin: 20px auto; /* Центрирование таблицы */
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    overflow: hidden; /* Скрываем содержимое за пределами скругленных углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
-tr,td{
-    background-color: grey;
-    border-radius: 10px;
+
+th, td {
+    padding: 12px 15px; 
+    text-align: center; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+th {
+    background-color: #721011; 
+    color: white; 
+    font-size: 18px; 
+    font-weight: bold; 
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.05); 
+    color: white; 
+    font-size: 16px; 
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.1); /* Цвет фона при наведении */
+}
+
+/* Стили для ячеек с результатами */
+td[style*="background-color: brown"] {
+    background-color: #8B4513 !important; /* Цвет для заполненных ячеек */
+    color: white; /* Цвет текста */
 }
 
 @keyframes move {
@@ -88,36 +118,65 @@ tr,td{
     text-align: center;
     vertical-align: middle;
 }
+/* Стили для деталей команды */
+.team-details {
+    display: none; /* Скрываем по умолчанию */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.team-details p {
+    margin: 10px 0;
+}
+
+.team-details ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.team-details li {
+    list-style-type: disc;
+}
 .grid-example {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ширина карточек от 300px */
-    gap: 20px; /* Увеличим расстояние между карточками */
-    padding: 20px; /* Отступы внутри контейнера */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    padding: 20px; 
 }
 .box {
     background-color: rgba(0, 0, 0, 0.747);
-    border-radius: 15px; /* Закруглим углы */
-    padding: 20px; /* Внутренние отступы */
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px; /* Минимальная ширина 300px, карточки растягиваются */
+    max-width: 300px; /* Максимальная ширина карточки */
 }
+
 .box:hover {
-    transform: scale(1.05); /* Увеличиваем карточку при наведении */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Тень при наведении */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
+
 .box img {
-    width: 150px; /* Уменьшим размер изображения */
-    height: 150px; /* Сделаем изображение квадратным */
-    border-radius: 50%; /* Круглое изображение */
-    object-fit: cover; /* Чтобы изображение не искажалось */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
+
 .box h3 {
-    margin: 15px 0 10px; /* Отступы для заголовка */
-    font-size: 24px; /* Увеличим размер заголовка */
+    margin: 15px 0 10px;
+    font-size: 24px;
 }
+
 .box p {
-    margin: 10px 0; /* Отступы для текста */
-    font-size: 16px; /* Размер текста */
+    margin: 10px 0;
+    font-size: 16px;
 }
 button{
     font-family: Gabriela;
@@ -251,4 +310,11 @@ footer {
 .footer-links a:hover {
     color: #ff0000;
     text-shadow: 0px 5px 3px white;
+}
+.footer-links ul, .footer-links li {
+    color: rgba(255, 255, 255, 0.493);
+    list-style-type: none;
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
 }

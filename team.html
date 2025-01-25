@@ -8,56 +8,109 @@
     <title>КиберОлимп</title>
 </head>
 <body>
-    <div class ="navbar">
+    <div class="navbar">
         <h1>КиберОлимп</h1>
         <div class="nav-links">
-            
             <a href="index.html">Турниры</a>
             <a href="forum.html">Форум</a>
             <a href="tournaments.html">Расписание турниров</a>
             <a href="team.html">Команды</a>
-        
         </div>
-            <a href="entrance.html" >Вход/Регистрация</a>
+        <a href="entrance.html">Вход/Регистрация</a>
     </div>
+
     <div class="content">
-    <div class="team">
-        <h2>Команды</h2>
-        <div class="grid-example">
-            <div class="box">
-                <img src="LogoTeam/Racoon.jpg">
-                <h3>Racoon</h3>
-                
-                <p><b>Дисциплина: </b>Marvel Rivals, APEX</p>
-                <button>Подробнее</button>
+        <div class="team">
+            <h2>Команды</h2>
+            <div class="grid-example">
+                <!-- Команда Racoon -->
+                <div class="box">
+                    <img src="LogoTeam/Racoon.jpg">
+                    <h3>Racoon</h3>
+                    <p><b>Дисциплина: </b>Marvel Rivals, APEX</p>
+                    <button onclick="toggleDetails('racoon')">Подробнее</button>
+                    <div id="racoon" class="team-details">
+                        <p><strong>Описание:</strong> Команда Racoon — это опытные игроки, специализирующиеся на Marvel Rivals и APEX. Они известны своей агрессивной тактикой и быстрой реакцией.</p>
+                        <p><strong>Состав:</strong></p>
+                        <ul>
+                            <li>Владимир Пупкин(Капитан)</li>
+                            <li>Коннова Арина</li>
+                            <li>Меньшиков Игорь</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Команда Horse -->
+                <div class="box">
+                    <img src="LogoTeam/Horse.jpg">
+                    <h3>Horse</h3>
+                    <p><b>Дисциплина: </b>Rocket League</p>
+                    <button onclick="toggleDetails('horse')">Подробнее</button>
+                    <div id="horse" class="team-details">
+                        <p><strong>Описание:</strong> Команда Horse — мастера Rocket League, известные своими точными ударами и слаженной командной игрой.</p>
+                        <p><strong>Состав:</strong></p>
+                        <ul>
+                            <li>Ткачев Родион(Капитан)</li>
+                            <li>Колотилин Андрей</li>
+                            <li>Абрамчук Леонид</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Команда Phoenix -->
+                <div class="box">
+                    <img src="LogoTeam/Phoenix.jpg">
+                    <h3>Phoenix</h3>
+                    <p><b>Дисциплина: </b>Dota 2</p>
+                    <button onclick="toggleDetails('phoenix')">Подробнее</button>
+                    <div id="phoenix" class="team-details">
+                        <p><strong>Описание:</strong> Команда Phoenix — легендарные игроки Dota 2, известные своими нестандартными стратегиями и выносливостью.</p>
+                        <p><strong>Состав:</strong></p>
+                        <ul>
+                            <li>Крылов Дмитрий(Капитан)</li>
+                            <li>Поступинская Анна</li>
+                            <li>Спиральев Петр</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Команда Shark -->
+                <div class="box">
+                    <img src="LogoTeam/Shark.jpg">
+                    <h3>Shark</h3>
+                    <p><b>Дисциплина: </b>CS2, Valorant</p>
+                    <button onclick="toggleDetails('shark')">Подробнее</button>
+                    <div id="shark" class="team-details">
+                        <p><strong>Описание:</strong> Команда Shark — профессионалы в CS2 и Valorant, известные своей тактической дисциплиной и точностью.</p>
+                        <p><strong>Состав:</strong></p>
+                        <ul>
+                            <li>Погодный Вальдемар (Капитан)</li>
+                            <li>Мухин Илья</li>
+                            <li>Наврский Святолюб</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Команда Soldier -->
+                <div class="box">
+                    <img src="LogoTeam/Soldier.jpg">
+                    <h3>Soldier</h3>
+                    <p><b>Дисциплина: </b>PUBG, Fortnite</p>
+                    <button onclick="toggleDetails('soldier')">Подробнее</button>
+                    <div id="soldier" class="team-details">
+                        <p><strong>Описание:</strong> Команда Soldier — эксперты в PUBG и Fortnite, известные своей выносливостью и умением выживать в сложных условиях.</p>
+                        <p><strong>Состав:</strong></p>
+                        <ul>
+                            <li>Крокодил Геннадий (Капитан)</li>
+                            <li>Коннова Арина(MVP)</li>
+                            <li>Нагиев Дмитрий</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="box">
-                <img src="LogoTeam/Horse.jpg">
-                <h3>Horse</h3>
-                <p><b>Дисциплина: </b>Rocket League</p>
-                <button>Подробнее</button>
-            </div>
-            <div class="box">
-                <img src="LogoTeam/Phoenix.jpg">
-                <h3>Phoenix</h3>
-                <p><b>Дисциплина: </b>Dota 2</p>
-                <button>Подробнее</button>
-            </div>
-            <div class="box">
-                <img src="LogoTeam/Shark.jpg">
-                <h3>Shark</h3>
-                <p><b>Дисциплина: </b>CS2, Valorant</p>
-                <button>Подробнее</button>
-            </div>
-            <div class="box">
-                <img src="LogoTeam/Soldier.jpg">
-                <h3>Soldier</h3>
-                <p><b>Дисциплина: </b>PUBG, Fortnite</p>
-                <button>Подробнее</button>
-            </div>
+        </div>
     </div>
-    </div>
-</div>
+
     <footer>
         <div class="footer-section">
             <div class="footer-left">
@@ -68,9 +121,9 @@
             <div class="footer-center">
                 <h3>О нас</h3>
                 <div class="footer-links">
-                    <a href="#">Информация</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Обзоры</a>
+                    <a href="forum.html">Информация</a>
+                    <a href="forum.html">FAQ</a>
+                    <a href="forum.html">Обзоры</a>
                 </div>
             </div>
         </div>
@@ -78,18 +131,25 @@
             <div class="footer-center">
                 <h3>Поддержка</h3>
                 <div class="footer-links">
-                    <a href="#">Форумы</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-section">
-            <div class="footer-center">
-                <h3>Контакты</h3>
-                <div class="footer-links">
-                    <a href="#">+7 (952)-220-00-67</a>
+                    <ul>
+                        <li><strong>Email:</strong> cyberolympgamer@yandex.ru</li>
+                        <li><strong>Телефон:</strong> +7 (952) 220-00-67</li>
+                        <li><strong>Часы работы:</strong> Пн-Пт, с 10:00 до 18:00 по МСК.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleDetails(teamId) {
+            const details = document.getElementById(teamId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

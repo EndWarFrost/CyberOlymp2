@@ -8,10 +8,23 @@
     <title>КиберОлимп</title>
 </head>
 <body>
-    <video autoplay loop id="bgvideo">
-        <source src="Background/GameVideo.mp4" type="video/mp4"></source>
+    <video autoplay muted loop id="bgvideo">
+        <source src="Background/GameVideo.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
     </video>
-    <form>
+
+    <div class="navbar">
+        <h1>КиберОлимп</h1>
+        <div class="nav-links">
+            <a href="index.html">Турниры</a>
+            <a href="forum.html">Форум</a>
+            <a href="tournaments.html">Расписание турниров</a>
+            <a href="team.html">Команды</a>
+        </div>
+        <a href="index.html">Вернуться</a>
+    </div>
+    <div class="content">
+    <form id="loginForm">
         <fieldset>
             <h2>Вход</h2>
             <input type="text" name="Login" class="space" placeholder="Login" required>
@@ -20,8 +33,45 @@
             <br>
             <a href="registretion.html">Регистрация</a>
             <br>
-            <button><a href="index.html">Войти</a></button>
+            <button type="submit">Войти</button>
         </fieldset>
     </form>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-left">
+                <h1>КиберОлимп</h1>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-center">
+                <h3>О нас</h3>
+                <div class="footer-links">
+                    <a href="forum.html">Информация</a>
+                    <a href="forum.html">FAQ</a>
+                    <a href="forum.html">Обзоры</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-center">
+                <h3>Поддержка</h3>
+                <div class="footer-links">
+                    <ul>
+                        <li><strong>Email:</strong> cyberolympgamer@yandex.ru</li>
+                        <li><strong>Телефон:</strong> +7 (952) 220-00-67</li>
+                        <li><strong>Часы работы:</strong> Пн-Пт, с 10:00 до 18:00 по МСК.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Обработчик отправки формы
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Отменяем стандартное поведение формы
+            window.location.href = 'index.html'; // Переход на index.html
+        });
+    </script>
 </body>
 </html>
