@@ -179,24 +179,25 @@
         font-size: 20px;
     }
 }
+
 /* Мобильная адаптация для форм регистрации и входа */
 @media (max-width: 768px) {
     /* Общие стили для форм */
     form {
-        width: 100%; /* Форма занимает всю ширину экрана */
-        padding: 10px; /* Добавляем отступы */
-        box-sizing: border-box; /* Учитываем padding в ширине */
+        width: 100%; 
+        padding: 10px;
+        box-sizing: border-box; 
     }
 
     fieldset {
-        width: 100%; /* Поле формы занимает всю ширину */
-        padding: 15px; /* Увеличиваем отступы внутри формы */
-        border-radius: 10px; /* Скругляем углы */
+        width: 100%; 
+        padding: 15px; 
+        border-radius: 10px; 
     }
 
     h2 {
-        font-size: 24px; /* Уменьшаем размер заголовка */
-        text-align: center; /* Центрируем заголовок */
+        font-size: 24px; 
+        text-align: center; 
     }
 
     input[type="text"],
