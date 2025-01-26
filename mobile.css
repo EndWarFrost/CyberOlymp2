@@ -1,5 +1,5 @@
 /* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     /* Навигационная панель */
     .navbar {
         flex-direction: column;
@@ -80,13 +80,13 @@
         padding: 8px 10px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     video {
         width: 100%;
         height: auto;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     button {
         font-size: 18px;
         padding: 8px 16px;
@@ -100,14 +100,14 @@
         font-size: 16px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     table {
         display: block;
         overflow-x: auto;
         white-space: nowrap;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .grid-example {
         flex-direction: column;
         gap: 10px;
@@ -118,7 +118,7 @@
         max-width: 100%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     footer {
         flex-direction: column;
         align-items: center;
@@ -147,7 +147,7 @@
         font-size: 16px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .navbar {
         flex-direction: column;
         height: auto;
@@ -163,7 +163,7 @@
         padding: 10px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .slider {
         width: 100%;
         max-width: 100%;
@@ -181,7 +181,7 @@
 }
 
 /* Мобильная адаптация для форм регистрации и входа */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     /* Общие стили для форм */
     form {
         width: 100%; 
