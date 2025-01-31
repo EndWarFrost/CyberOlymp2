@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tour.css">
     <link rel="stylesheet" href="mobile.css">
     <title>КиберОлимп</title>
 </head>
@@ -26,29 +27,46 @@
             <a href="team.html">Команды</a>
         </div>
         <a href="entrance.html">Вход/Регистрация</a>
-        <div class="burger-menu" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
     </div>
 
     <div class="content" id="ready">
-        <div class="text">
-        <p>Готов ли ты проложить свой путь в мир киберспорта?</p>
+        <div class="tournaments-grid">
+            <!-- Блок для CS2 -->
+            <div class="tournament-box">
+                <h3>CS2 Турнир</h3>
+                <p>Прими участие в турнире по CS2 и покажи свои навыки!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
 
-            <p>Если твой ответ – да, то ты попал по адресу! </p>
-            
-            <p>КиберОлимп – это именно то место, где твой потенциал будет раскрыт. Мы предоставляем все необходимое для успеха: от обучения играм до участия в турнирах. </p>
-            
-            <p>Не упусти шанс стать частью динамичного и захватывающего мира киберспорта! </p>
-            
-            <p>Присоединяйся к нам и открой для себя бесконечные возможности!</p>
-            <p>Готов ли ты?</p>
+            <!-- Блок для Dota 2 -->
+            <div class="tournament-box">
+                <h3>Dota 2 Турнир</h3>
+                <p>Собери команду и сражайся за звание чемпиона в Dota 2!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
+
+            <!-- Блок для Rocket League -->
+            <div class="tournament-box">
+                <h3>Rocket League Турнир</h3>
+                <p>Покажи свои навыки в Rocket League и выиграй призы!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
+            <div class="tournament-box">
+                <h3>PUBG Турнир</h3>
+                <p>Собери отряд, выживи и стань последним героем на поле боя в PUBG!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
+            <div class="tournament-box">
+                <h3>Marvel Rivals Турнир</h3>
+                <p>Объедини супергероев и сражайся за победу в эпических битвах Marvel Rivals!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
+            <div class="tournament-box">
+                <h3>Fortnite Турнир</h3>
+                <p>Построй, сражайся и выигрывай в Fortnite, чтобы стать королём королевской битвы!</p>
+                <button onclick="window.location.href='entrance.html'">Участвовать</button>
+            </div>
         </div>
-        
-        <button type="submit" onclick="document.location='tour.html'">ГОТОВ</button>
-    
     </div>
 
     <footer>
@@ -96,6 +114,7 @@
       
 
         setInterval(slider, 5000); // Меняем изображение каждые 5 секунд
+       
     </script>
 
 </body>

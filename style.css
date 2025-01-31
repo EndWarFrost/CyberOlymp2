@@ -2,47 +2,92 @@
     font-family: Gabriela;
     src: url('Font/Gabriela-Regular.ttf');
 }
+
 html, body {
-    margin: 0px;
-    padding: 0px;
-    background: #D8383A;
-    color: white;
-   font-size: 20px;
-   font-family: Gabriela;
-   display: flex;
-   flex-direction: column;
-   height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
 }
-/*Навигационная таблица*/
-.navbar{
-    background: #100202;
-    height: 40px;
+
+body {
+    font-family: Gabriela;
+    color: white;
+    background: #0a0a23; /* Темно-синий фон */
+    flex: 1;
+}
+
+/* Слайдер */
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Слайдер на заднем плане */
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+/* Навигационная таблица */
+.navbar {
+    background: rgba(2, 124, 29, 0.7); /* Синий полупрозрачный фон */
+    backdrop-filter: blur(10px);
+    height: 80px;
     display: flex;
     padding: 10px;
-    margin: 0;
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
+    position: relative;
+    z-index: 1;
 }
+
+.navbar img {
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
+}
+
 .nav-links {
-    display: flex;
     justify-content: center;
     flex-grow: 1;
 }
+
 .navbar a {
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
+
 .navbar a:hover {
-    color: #ff0000;
-    animation: move 7s infinite alternate;
-    text-shadow: 0px 5px 3px white;
-    }
+    color: #00039e;
+    transform: translateY(-3px);
+    text-shadow: 0px 5px 3px rgba(255, 255, 255, 0.5);
+}
     /* Стили для дополнительной навигационной панели форума */
 .forum-nav {
-    background: #721011;
+    background: #02c42ca8;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -60,8 +105,12 @@ html, body {
 }
 
 .forum-nav a:hover {
-    background-color: #100202;
-    color: #ff0000;
+    background-color: #7f11fd;
+    color:  rgb(22, 236, 129);
+}
+.type {
+    color: white;
+    text-decoration: none;
 }
 /* Стили для таблиц */
 table {
@@ -73,6 +122,7 @@ table {
     border-radius: 10px; 
     overflow: hidden; /* Скрываем содержимое за пределами скругленных углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    
 }
 
 th, td {
@@ -153,10 +203,10 @@ td[style*="background-color: brown"] {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex: 1 1 300px; /* Минимальная ширина 300px, карточки растягиваются */
-    max-width: 300px; /* Максимальная ширина карточки */
+    flex: 1 1 300px;
+    max-width: 300px;
+    margin: 10px;
 }
-
 .box:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
@@ -167,37 +217,26 @@ td[style*="background-color: brown"] {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    transition:  transform 0.3s ease;
 }
-
+.box:hover img {
+    transform: scale(1.1);
+}
 .box h3 {
     margin: 15px 0 10px;
     font-size: 24px;
+    color: #29af00;
+    text-shadow: 0 0 5px white;
 }
 
 .box p {
     margin: 10px 0;
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
 }
-button{
-    font-family: Gabriela;
-    font-size: 25px;
-    border: 0;
-    border-radius: 10px;
-    background-color: #721011;
-    color: white;
-    margin-top: 15px; /* Отступ для кнопки */
-    padding: 10px 20px; /* Размер кнопки */
-    font-size: 18px; /* Размер текста на кнопке */
-    cursor: pointer; /* Курсор в виде указателя */
-}
-button:hover{
-    font-family: Gabriela;
-    background-color: white;
-    color: #721011;
-}
-/*Слайдер*/
+/*Основная часть*/
 .content {
-    padding-top: 30px;
+    padding-top: 100px;
     flex: 1;
     padding-bottom: 50px;
     width: 80%;
@@ -205,72 +244,48 @@ button:hover{
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирование содержимого */
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
-.slider {
-    width: 100%; /* Слайдер занимает всю ширину контейнера content */
-    max-width: 1400px; /* Максимальная ширина слайдера */
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.808);
-    border-radius: 15px;
-    box-shadow: 0 0px 16px rgba(255, 255, 255, 0.5);
-    position: relative; /* Для позиционирования кнопок prev и next */
-}
-
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    font-size: 120px;
-    text-align: center;
-    padding: 60px;
-    color: #463d3d;
-    border-radius: 15px;
-}
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 10px 21.5px;
-    margin-top: -30px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.6s ease;
-    border-radius: 50%;
-    user-select: none;
-    background: #721011;
-}
-.prev {
-    left: 20px;
-}
-
-.next {
-    right: 20px;
-}
-.prev:hover, .next:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #721011;
-}
-video {
-    width: 100%;
+.text {
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+.text ul li{
+    list-style-type: none;
+}
+.content button {
+    font-family: Gabriela;
+    color: white;
+    font-size: 22px; /* Уменьшим размер шрифта */
+    width: 280px;
+    border: 0;
+    background-color: rgba(2, 124, 29);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px; /* Добавим отступы */
+    cursor: pointer;
+    transition:  transform 0.3s ease;
+}
+.content button:hover{
+    color: #5008f8;
+    background-color: white;
+    transform:  scale(1.1);
 }
 /* Подвал */
 footer {
-    background: #100202;
+    background: rgba(2, 124, 29, 0.7); /* Синий полупрозрачный фон */
     height: auto;
     padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 .footer-section {
@@ -278,18 +293,19 @@ footer {
     min-width: 200px;
     margin: 10px;
     text-align: center;
-    
 }
 
-.footer-left h1 {
-    font-size: 40px;
-    margin: 0;
-    padding-top: 30px;
+.footer-left img {
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.5);
 }
 
 .footer-center h3 {
     font-size: 24px;
-    color: #ffffffad;
+    color: #ffffffe3;
     margin: 0;
 }
 
@@ -301,18 +317,26 @@ footer {
     margin-top: 10px;
 }
 
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
 .footer-links a {
-    color: rgba(255, 255, 255, 0.493);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
 }
 
 .footer-links a:hover {
-    color: #ff0000;
+    color: #00ff15;
     text-shadow: 0px 5px 3px white;
 }
 .footer-links ul, .footer-links li {
-    color: rgba(255, 255, 255, 0.493);
+    color: rgb(255, 255, 255);
     list-style-type: none;
     text-decoration: none;
     text-align: left;
